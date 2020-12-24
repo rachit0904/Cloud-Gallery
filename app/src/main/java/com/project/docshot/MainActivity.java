@@ -147,7 +147,8 @@ public class MainActivity extends AppCompatActivity {
             if(characteristics != null){
                 jpegSizes=characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP).getOutputSizes(ImageFormat.JPEG);
             }
-            int width = 640;int height = 480;
+            int width = 640;
+            int height = 480;
             if(jpegSizes!=null && jpegSizes.length>0){
                 width=jpegSizes[0].getWidth();
                 height=jpegSizes[0].getHeight();
