@@ -102,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
         doneBtn.setEnabled(false);
         assert textureView !=null;
 
+
+
         galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

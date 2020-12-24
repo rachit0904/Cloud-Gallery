@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "35307770101",
+    "project_id": "docshot",
+    "storage_bucket": "docshot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35307770101:android:ee85620a3442e1c63035bc",
+        "android_client_info": {
+          "package_name": "com.project.docshot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35307770101-5lp6n4b3jellfb7onnpsf4kggv0gffe8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBn-ZNN41jhfPX2JxnZYyiR8RF6B0tMfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35307770101-5lp6n4b3jellfb7onnpsf4kggv0gffe8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
