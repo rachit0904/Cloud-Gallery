@@ -7,10 +7,6 @@
     tools:context=".MainActivity">
 
 
-    <TextureView
-        android:id="@+id/cameraBckGrnd"
-        android:layout_width="414dp"
-        android:layout_height="570dp" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/relLayout"
@@ -38,10 +34,131 @@
             app:srcCompat="@drawable/setting" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <TableRow
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
+    <RelativeLayout
         android:layout_below="@id/cameraBckGrnd"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/selection"
+        android:text="Document"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/selection"
+        android:layout_height="2dp"
+        android:background="#DCC6C6C6" />
+
+
+    <TableRow
+        android:id="@+id/types"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/divider"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <ImageButton
+                android:layout_gravity="center"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#00FFFFFF"
+                app:srcCompat="@drawable/legal" />
+            <TextView
+
+                android:layout_width="62dp"
+                android:layout_height="23dp"
+                android:text="Legal"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <ImageButton
+                android:layout_gravity="center"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#00FFFFFF"
+                app:srcCompat="@drawable/auto" />
+            <TextView
+
+                android:layout_width="62dp"
+                android:layout_height="23dp"
+                android:text="A4"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <ImageButton
+                android:layout_gravity="center"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#00FFFFFF"
+                app:srcCompat="@drawable/auto" />
+            <TextView
+
+                android:layout_width="62dp"
+                android:layout_height="23dp"
+                android:text="Letter"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <ImageButton
+                android:tint="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#00FFFFFF"
+                app:srcCompat="@drawable/auto" />
+            <TextView
+
+                android:layout_width="62dp"
+                android:layout_height="23dp"
+                android:text="Auto"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/types"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
 
@@ -78,7 +195,7 @@
         android:layout_height="53dp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/camera" />
+        app:srcCompat="@drawable/shutter" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -104,5 +221,9 @@
     </LinearLayout>
 
     </TableRow>
-
+    </RelativeLayout>
+    <TextureView
+        android:id="@+id/cameraBckGrnd"
+        android:layout_width="match_parent"
+        android:layout_height="380dp" />
 </RelativeLayout>

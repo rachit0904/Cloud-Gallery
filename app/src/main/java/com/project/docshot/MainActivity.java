@@ -8,7 +8,9 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Camera;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
@@ -99,6 +101,14 @@ public class MainActivity extends AppCompatActivity {
         textureView=findViewById(R.id.cameraBckGrnd);
         doneBtn.setEnabled(false);
         assert textureView !=null;
+
+        galleryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,gallery.class));
+                finish();
+            }
+        });
 
         textureView.setSurfaceTextureListener(textureListner);
 
