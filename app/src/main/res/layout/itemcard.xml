@@ -19,8 +19,8 @@
             android:src="@drawable/legal"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center_vertical"
-            android:layout_width="50dp"
-            android:layout_height="50dp"/>
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
         <LinearLayout
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="30dp"
@@ -61,7 +61,7 @@
                 <TextView
                     android:id="@+id/pages"
                     android:layout_marginTop="2dp"
-                    android:hint="Pgs: 4"
+                    android:hint="Pgs: 1"
                     android:textSize="14sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -80,6 +80,22 @@
                     android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
+       <LinearLayout
+           android:visibility="gone"
+           android:gravity="end"
+           android:layout_gravity="center_vertical"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/delete"
+            android:src="@drawable/more"
+            android:layout_marginRight="25dp"
+            android:backgroundTint="#00FFFFFF"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+       </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
 

@@ -1,17 +1,26 @@
 package Data;
 
 public class ImageFiles {
-    private String title,date,time,pages;
+    private String title,date,time,pages,imageURL;
 
     public ImageFiles() {
 
     }
 
-    public ImageFiles(String title, String date, String time, String pages) {
+    public ImageFiles(String imageURL,String title, String date, String time, String pages) {
+        this.imageURL=imageURL;
         this.title = title;
         this.date = date;
         this.time = time;
         this.pages = pages;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 
     public String getTitle() {

@@ -5,13 +5,13 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.project.docshot.R;
-
-import org.w3c.dom.Text;
+import com.project.docshot.imagePreview;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -42,6 +42,14 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
                 holder.date.setText(files.getDate());
                 holder.time.setText(files.getTime());
                 holder.pages.setText(files.getPages());
+                String URL=files.getImageURL();
+                Picasso.
+                with(context)
+                .load(URL)
+                .noFade()
+                .fit()
+                .placeholder(R.drawable.legal) // can also be a drawable
+                .into(holder.image);
     }
 
     @Override
@@ -51,6 +59,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView image;
+        public ImageButton deleteBtn;
         public TextView fileName,date,time,pages;
         public ViewHolder(@NonNull View itemView,Context ctx) {
             super(itemView);
@@ -60,14 +69,21 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             date=itemView.findViewById(R.id.fileDate);
             time=itemView.findViewById(R.id.fileTime);
             pages=itemView.findViewById(R.id.pages);
+            deleteBtn=itemView.findViewById(R.id.delete);
+            deleteBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int pos=getAdapterPosition();
                     ImageFiles files= imageFiles.get(pos);
-                    Toast.makeText(ctx, files.getTitle(), Toast.LENGTH_SHORT).show();
-                    //Intent intent=new Intent();
-                    //context.startActivities();
+                    Intent intent=new Intent(ctx, imagePreview.class);
+                    intent.putExtra("imageUrl",files.getImageURL());
+                    context.startActivity(intent);
                 }
             });
         }
