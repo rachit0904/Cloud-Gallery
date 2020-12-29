@@ -66,12 +66,12 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-3dp" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="400dp"
         android:backgroundTint="@android:color/holo_red_light"
         android:backgroundTintMode="add"
         android:clickable="true"
